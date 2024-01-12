@@ -1,18 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The CG-Now</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-<nav>
-    
-</nav>
-<main></main>
-
-</body>
-<script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" onclick="reload()" "company-logo">
+          <img src="./assets/logo.png" alt="companylogo" />
+        </a>
+        <div class="nav-links">
+          <ul class="flex">
+            <li id="ipl"  onclick="onNavItemClick('ipl')" class="hover-link nav-item active ">IPL</li>
+            <li id="finance" onclick="onNavItemClick('finance')" class="hover-link nav-item active">Finance</li>
+            <li id="politics" onclick="onNavItemClick('politics')" class="hover-link nav-item active">Politics</li>
+          </ul>
+        </div>
+        <div class="search-bar">
+          <input id="text1" type="text" class="news-input" placeholder="Search" />
+          <button id="btn" class="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="cards-container container flex" id="cards-container"></div>
+      <div class="card">
+        <div class="card-header">
+          <img id="news-img" src="https://via.placeholder.com/400x200" alt="News" />
+        </div>
+        <div class="card-content">
+          <h3 id="news-title">This is The Heading</h3>
+          <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            aut minima numquam quia et ipsam ratione, ducimus nobis minus nihil
+            eaque officiis optio rerum harum autem cum fugiat error temporibus.
+          </p>
+        </div>
+      </div>
+    </main>
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+              <img id="news-img" src="https://via.placeholder.com/400x200" alt="News" />
+            </div>
+            <div class="card-content">
+              <h3 id="news-title">This is The Heading</h3>
+              <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+              <p class="news-desc" id="news-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                aut minima numquam quia et ipsam ratione, ducimus nobis minus nihil
+                eaque officiis optio rerum harum autem cum fugiat error temporibus.
+              </p>
+            </div>
+          </div> </template>
+  </body>
+  <script src="script.js"></script>
 </html>
